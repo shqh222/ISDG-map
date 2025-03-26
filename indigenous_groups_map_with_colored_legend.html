@@ -34,7 +34,13 @@
                 }
                 .leaflet-container { font-size: 1rem; }
             </style>
-        
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />  
+<style>
+    #map { 
+        height: 600px;
+        width: 100%;
+    }
+</style>
 </head>
 <body>
     
@@ -61,7 +67,10 @@
 </div>
     
             <div class="folium-map" id="map_63c2a1d506076d05c27903bbc8974a83" ></div>
-        
+        <script>
+    var map = L.map('map').setView([51.505, -0.09], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+</script>
 </body>
 <script>
     
